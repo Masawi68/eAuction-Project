@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Vehicle>
+
+@{
+    ViewData["Title"] = "List of Vehicles";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                   
+                    <th>@Html.DisplayNameFor(model => model.ProductPicURL)</th>
+                    <th>@Html.DisplayNameFor(model => model.LotNumber)</th>
+                     <th>@Html.DisplayNameFor(model => model.VehicleCategory)</th>
+                    <th>@Html.DisplayNameFor(model => model.Discription)</th>
+                   <th>@Html.DisplayNameFor(model => model.Year)</th>
+                    <th>@Html.DisplayNameFor(model => model.Make)</th>
+                   <th>@Html.DisplayNameFor(model => model.Model)</th>
+                    <th>@Html.DisplayNameFor(model => model.StartBidPrice)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="align-middle">
+                            <img class="rounded-circle" src="@item.ProductPicURL" alt="@item.Make" style="max-width: 150px" />
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.LotNumber)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.VehicleCategory)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Discription)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Year)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Make)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Model)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.StartBidPrice)
+                        </td>
+                
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
+

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DigitalGoods>
+
+@{
+    ViewData["Title"] = "List of DigitalGood";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+
+                    <th>@Html.DisplayNameFor(model => model.ProductPicURL)</th>
+                    <th>@Html.DisplayNameFor(model => model.LotNumber)</th>
+                    <th>@Html.DisplayNameFor(model => model.DigitalCategory)</th>
+                    <th>@Html.DisplayNameFor(model => model.Discription)</th>
+                    <th>@Html.DisplayNameFor(model => model.Condition)</th>
+                    <th>@Html.DisplayNameFor(model => model.StartBidPrice)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="align-middle">
+                            <img class="img-fluid" src="@item.ProductPicURL" alt="@item.LotNumber" style="max-width: 150px" />
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.LotNumber)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.DigitalCategory)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Discription)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Condition)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.StartBidPrice)
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
