@@ -5,23 +5,6 @@
 }
 
 <div class="row">
-    <div class="col-md-8 offset-md-2">
-
-        <table class="table">
-            <thead>
-                <tr class="text-center">
-                   
-                    <th>@Html.DisplayNameFor(model => model.ProductPicURL)</th>
-                    <th>@Html.DisplayNameFor(model => model.LotNumber)</th>
-                     <th>@Html.DisplayNameFor(model => model.VehicleCategory)</th>
-                    <th>@Html.DisplayNameFor(model => model.Discription)</th>
-                   <th>@Html.DisplayNameFor(model => model.Year)</th>
-                    <th>@Html.DisplayNameFor(model => model.Make)</th>
-                   <th>@Html.DisplayNameFor(model => model.Model)</th>
-                    <th>@Html.DisplayNameFor(model => model.StartBidPrice)</th>
-                </tr>
-            </thead>
-            <tbody>
                 @foreach (var item in Model)
                 {
                     <tr>
