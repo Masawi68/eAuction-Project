@@ -1,6 +1,7 @@
 ﻿using eAuction.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace eAuction.Controllers
@@ -15,7 +16,7 @@ namespace eAuction.Controllers
 		}
 		public async Task<IActionResult> Index()
 		{
-			var allVehicles = await _context.Vehicles.ToListAsync();
+			var allVehicles = await _context.Vehicles.OrderBy(n => n.LotNumber).ToListAsync();
 			return View(allVehicles);
 		}
 	}

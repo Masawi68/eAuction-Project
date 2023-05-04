@@ -17,7 +17,7 @@ namespace eAuction.Controllers
 		public async Task<IActionResult> Index()
 		{
 			var allProduct = await _context.Product.ToListAsync();
-			return View();
+			return View(allProduct);
 		}
 	}
 }

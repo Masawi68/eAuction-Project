@@ -1,6 +1,7 @@
 ﻿using eAuction.Data.Enum;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.VisualBasic;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace eAuction.Models
@@ -16,5 +17,6 @@ namespace eAuction.Models
         public string Make { get; set; }
         public string Model { get; set; }
         public double StartBidPrice { get; set; }
+       
     }
 }

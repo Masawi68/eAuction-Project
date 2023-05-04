@@ -1,7 +1,7 @@
-﻿@model IEnumerable<DigitalGoods>
+﻿@model IEnumerable<Products>
 
 @{
-    ViewData["Title"] = "List of DigitalGood";
+    ViewData["Title"] = "List of Products";
 }
 <!DOCTYPE html>
 <html>
@@ -14,17 +14,17 @@
 </head>
 <body>
     <div class="row">
-        @foreach (var item in Model)
+         @foreach (var item in Model)
         {
             <div class="col-md-4 col-xs-6 border-primary mb-3">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3" style="max-width: 580px;">
                     <div class="row g-0">
                         <div class="col-md-12">
                             <div class="card-header text-white bg-info">
                                 <p class="card-text">
                                     <h5 class="card-title">
-                                        Category<a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
-
+                                        Lot Number: @item.LotNumber<a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
+                                    
                                     </h5>
                                 </p>
                             </div>
@@ -34,11 +34,12 @@
                         </div>
                         <div class="col-md-6">
                             <div class="card-body">
-                                <p class="card-text"><b>LotNumber:</b>xxx</p>
-                                <p class="card-text"><b>DigitalCategory:</b>xxx</p>
-                                <p class="card-text"><b>Discription: </b>xxx</p>
-                                <p class="card-text"><b>Condition: </b>1900</p>
-                                <p class="card-text"><b>StartBidPrice: </b>StartBidPrice</p>
+                              
+                                <p class="card-text"><b>Product Category:</b> @item.ProductCategory</p>
+                                <p class="card-text"><b>Brand: </b> @item.Brand</p>
+                                <p class="card-text"><b>Discription: </b> @item.Discription</p>
+                                <p class="card-text"><b>Condition: </b> @item.Condition</p>
+                                <p class="card-text"><b>Start Bid Price: </b> @item.StartBidPrice</p>
                                 <p class="card-text ">
                                     <b>Status: </b>
                                     Staus Sample
@@ -50,7 +51,7 @@
                             <div class="card-footer ">
                                 <p class="card-text">
                                     <a class="btn btn-outline-primary float-right"><i class="bi bi-eye-fill"></i> Show Details </a>
-                                    <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> Place Bid ($0.00)</a>
+                                    <a class="btn btn-success text-white">Place Bid</a>
                                 </p>
                             </div>
                         </div>
@@ -61,4 +62,3 @@
     </div>
 </body>
 </html>
-
